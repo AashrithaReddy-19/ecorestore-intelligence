@@ -1,0 +1,13 @@
+{
+  "source_id": "CBD_SPECIES_RICHNESS_001",
+  "organization": "CBD",
+  "title": "Habitat heterogeneity and species richness in managed landscapes",
+  "year": 2020,
+  "url": "https://www.cbd.int/agro/",
+  "topic_tags": ["species richness", "habitat structure", "agricultural biodiversity"],
+  "ecosystem_tags": ["cropland", "grassland"],
+  "claim": "Increasing structural and floral diversity within managed landscapes, such as through flowering strips and agroforestry, is associated with greater observed species richness compared with uniform monoculture.",
+  "conditions": ["monoculture land use", "low species observations", "low habitat structure"],
+  "metrics_affected": ["species_richness", "soil_biodiversity"],
+  "evidence_text": "CBD guidance on agricultural biodiversity notes that structurally uniform monoculture landscapes typically support fewer species than landscapes with added habitat heterogeneity, such as flowering margins, hedgerows, or scattered trees. Introducing this structural and floral diversity is consistently associated with increased use by pollinators, birds, and other taxa, making it a practical lever where species observations are currently low."
+}

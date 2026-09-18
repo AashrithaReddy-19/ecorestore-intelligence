@@ -1,0 +1,13 @@
+{
+  "source_id": "FAO_IPM_001",
+  "organization": "FAO",
+  "title": "Integrated Pest Management guidance",
+  "year": 2019,
+  "url": "https://www.fao.org/pest-and-pesticide-management/ipm/en/",
+  "topic_tags": ["integrated pest management", "pesticide reduction", "agrochemical runoff"],
+  "ecosystem_tags": ["cropland"],
+  "claim": "Integrated Pest Management, which uses monitoring-based thresholds and biological controls before chemical treatment, reduces pesticide inputs and the associated harm to non-target species and downstream water quality.",
+  "conditions": ["pesticide use", "monoculture land use", "low species observations"],
+  "metrics_affected": ["species_richness", "pollution_risk", "soil_biodiversity"],
+  "evidence_text": "FAO's Integrated Pest Management framework promotes monitoring-based decision thresholds, crop rotation, resistant varieties, and biological control agents as alternatives to routine calendar-based pesticide spraying. By reducing overall and non-targeted chemical applications, IPM lowers off-target mortality of pollinators and soil organisms and reduces agrochemical runoff into adjacent soil and water systems."
+}

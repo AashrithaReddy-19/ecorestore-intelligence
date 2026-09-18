@@ -1,0 +1,13 @@
+{
+  "source_id": "FAO_SOC_001",
+  "organization": "FAO",
+  "title": "Soil organic carbon: the hidden potential",
+  "year": 2017,
+  "url": "https://www.fao.org/soils-portal/soil-management/soil-organic-carbon/en/",
+  "topic_tags": ["soil organic carbon", "agriculture", "soil biodiversity", "cover crops"],
+  "ecosystem_tags": ["cropland"],
+  "claim": "Maintaining ground cover and adding organic matter, such as through cover crops and residue retention, helps rebuild depleted soil organic carbon and the microbial and invertebrate communities that depend on it.",
+  "conditions": ["low soil organic carbon", "cropland", "monoculture land use"],
+  "metrics_affected": ["soil_organic_carbon", "soil_biodiversity", "soil_moisture"],
+  "evidence_text": "FAO's soil organic carbon guidance identifies continuous soil cover, crop residue retention, and diversified cropping (including cover crops and legumes) as core practices for rebuilding organic carbon stocks that have been depleted by intensive monoculture. Soil organic carbon underpins water retention capacity and supports the soil biodiversity that drives nutrient cycling, so its depletion under continuous cropping without residue return is a widely documented risk on degraded agricultural land."
+}

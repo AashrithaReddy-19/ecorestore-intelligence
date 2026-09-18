@@ -1,0 +1,13 @@
+{
+  "source_id": "CBD_CONNECTIVITY_001",
+  "organization": "CBD",
+  "title": "Ecological connectivity and habitat corridors in the Kunming-Montreal Global Biodiversity Framework",
+  "year": 2022,
+  "url": "https://www.cbd.int/gbf/",
+  "topic_tags": ["habitat fragmentation", "wildlife corridor", "connectivity restoration"],
+  "ecosystem_tags": ["forest", "grassland", "cropland", "mangrove", "wetland"],
+  "claim": "Restoring ecological connectivity between fragmented habitat patches, such as through corridors and buffer zones, is identified as a priority action for reversing species decline caused by habitat isolation.",
+  "conditions": ["high habitat fragmentation", "declining species observations", "human disturbance nearby"],
+  "metrics_affected": ["habitat_connectivity", "species_richness"],
+  "evidence_text": "The Convention on Biological Diversity's Kunming-Montreal Global Biodiversity Framework (Target 2 and Target 3) emphasises restoring connectivity between protected and managed areas so species can move, disperse, and maintain viable populations. Habitat fragmentation driven by land conversion and human disturbance is identified as a primary mechanism of local species decline, and corridor or buffer-zone restoration between isolated patches is recommended as a direct countermeasure."
+}

@@ -1,0 +1,13 @@
+{
+  "source_id": "FAO_EROSION_001",
+  "organization": "FAO",
+  "title": "Sustainable soil management for erosion control",
+  "year": 2019,
+  "url": "https://www.fao.org/soils-portal/soil-degradation-restoration/erosion/en/",
+  "topic_tags": ["erosion control", "ground cover", "sediment runoff"],
+  "ecosystem_tags": ["cropland", "grassland", "riparian"],
+  "claim": "Maintaining native, deep-rooted ground cover on exposed or degraded slopes reduces surface runoff velocity and sediment loss compared with bare or sparsely vegetated soil.",
+  "conditions": ["degraded vegetation cover", "high rainfall", "bare or exposed soil"],
+  "metrics_affected": ["soil_moisture", "pollution_risk"],
+  "evidence_text": "FAO sustainable soil management guidance identifies continuous ground cover as one of the most effective practical measures against erosion: root networks physically bind topsoil and above-ground cover slows the velocity of surface runoff, both of which reduce sediment loss. The guidance recommends prioritising fast-establishing native groundcover species on slopes and bare patches most exposed to high-intensity rainfall."
+}

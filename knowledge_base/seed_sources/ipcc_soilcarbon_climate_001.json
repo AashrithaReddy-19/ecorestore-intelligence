@@ -1,0 +1,13 @@
+{
+  "source_id": "IPCC_SOILCARBON_CLIMATE_001",
+  "organization": "IPCC",
+  "title": "Special Report on Climate Change and Land — soil carbon and land degradation",
+  "year": 2019,
+  "url": "https://www.ipcc.ch/srccl/chapter/chapter-2/",
+  "topic_tags": ["soil organic carbon", "climate resilience", "land degradation"],
+  "ecosystem_tags": ["cropland", "dryland", "grassland"],
+  "claim": "Land degradation and declining soil organic carbon reduce the resilience of agricultural soils to rainfall variability and rising temperatures, while restorative land management practices can help rebuild that resilience.",
+  "conditions": ["low soil organic carbon", "rising temperature trend", "irregular rainfall"],
+  "metrics_affected": ["soil_organic_carbon", "soil_moisture"],
+  "evidence_text": "The IPCC Special Report on Climate Change and Land links declining soil organic carbon to reduced water-holding capacity and structural stability, compounding the impact of rising temperatures and more variable rainfall on agricultural productivity and ecosystem function. The report identifies restorative practices — including reduced tillage, cover cropping, and agroforestry — as measures that can rebuild soil carbon and associated climate resilience over time."
+}

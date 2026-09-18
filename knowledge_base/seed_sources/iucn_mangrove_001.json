@@ -1,0 +1,13 @@
+{
+  "source_id": "IUCN_MANGROVE_001",
+  "organization": "IUCN",
+  "title": "Mangroves and coastal ecosystems — issues brief",
+  "year": 2021,
+  "url": "https://www.iucn.org/resources/issues-brief/mangroves-and-coastal-ecosystems",
+  "topic_tags": ["mangrove restoration", "coastal resilience", "nursery habitat", "aquaculture impact"],
+  "ecosystem_tags": ["mangrove", "coastal"],
+  "claim": "Mangrove forests provide nursery habitat for fish and crustaceans and buffer coastlines from erosion, but are under sustained pressure from aquaculture expansion and land conversion, making native replanting a priority restoration action.",
+  "conditions": ["mangrove ecosystem", "aquaculture expansion", "coastal habitat loss"],
+  "metrics_affected": ["habitat_connectivity", "species_richness", "pollution_risk"],
+  "evidence_text": "IUCN identifies conversion of mangrove forest to aquaculture ponds as one of the leading drivers of mangrove loss globally, removing nursery habitat that supports coastal fisheries and reducing natural buffering against storms and erosion. Restoration approaches favoured by IUCN prioritise replanting native mangrove species matched to local tidal and salinity conditions, focusing first on the most fragmented remaining patches to reconnect nursery habitat corridors."
+}

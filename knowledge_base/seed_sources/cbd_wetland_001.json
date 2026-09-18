@@ -1,0 +1,13 @@
+{
+  "source_id": "CBD_WETLAND_001",
+  "organization": "CBD",
+  "title": "Wetland ecosystem restoration guidance",
+  "year": 2018,
+  "url": "https://www.cbd.int/ecosystem/",
+  "topic_tags": ["wetland restoration", "hydrology restoration", "fragmented wetland"],
+  "ecosystem_tags": ["wetland", "mangrove", "riparian"],
+  "claim": "Restoring the natural hydrology of drained or degraded wetlands, alongside revegetation with native hydrophytic species, is a recommended approach for reversing wetland biodiversity loss.",
+  "conditions": ["wetland ecosystem", "high habitat fragmentation", "degraded land use"],
+  "metrics_affected": ["habitat_connectivity", "soil_moisture", "species_richness"],
+  "evidence_text": "CBD ecosystem restoration guidance highlights that wetland degradation is frequently driven by disrupted hydrology — altered water inflow from drainage, diversion, or surrounding land-use change — rather than vegetation loss alone. Effective restoration therefore prioritises re-establishing natural water flow paths before or alongside revegetation with native wetland species, particularly where fragmentation has isolated remaining wetland patches from their original hydrological network."
+}

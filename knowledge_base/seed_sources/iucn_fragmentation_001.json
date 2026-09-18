@@ -1,0 +1,13 @@
+{
+  "source_id": "IUCN_FRAGMENTATION_001",
+  "organization": "IUCN",
+  "title": "Habitat fragmentation as a driver of species decline — Red List assessments overview",
+  "year": 2022,
+  "url": "https://www.iucnredlist.org/resources/summary-statistics",
+  "topic_tags": ["habitat fragmentation", "species decline", "wildlife corridor"],
+  "ecosystem_tags": ["forest", "grassland", "mangrove", "wetland"],
+  "claim": "Habitat fragmentation is repeatedly identified across IUCN Red List species assessments as a major threat driving population decline, independent of overall habitat area lost.",
+  "conditions": ["high habitat fragmentation", "low species observations", "human disturbance nearby"],
+  "metrics_affected": ["habitat_connectivity", "species_richness"],
+  "evidence_text": "IUCN Red List threat classification data consistently records habitat fragmentation — the breaking of continuous habitat into smaller, disconnected patches — as a distinct threat from outright habitat loss, and one strongly associated with declining population trends across taxa. This supports prioritising connectivity-focused restoration (corridors, stepping-stone patches, buffer zones) even in landscapes where some habitat area remains, particularly where field observations already indicate reduced species activity."
+}

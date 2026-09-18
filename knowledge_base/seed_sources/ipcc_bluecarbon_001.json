@@ -1,0 +1,13 @@
+{
+  "source_id": "IPCC_BLUECARBON_001",
+  "organization": "IPCC",
+  "title": "Special Report on the Ocean and Cryosphere in a Changing Climate — coastal ecosystems chapter",
+  "year": 2019,
+  "url": "https://www.ipcc.ch/srocc/chapter/chapter-4-sea-level-rise-and-implications-for-low-lying-islands-coasts-and-communities/",
+  "topic_tags": ["blue carbon", "mangrove", "coastal resilience", "sea level rise"],
+  "ecosystem_tags": ["mangrove", "coastal", "wetland"],
+  "claim": "Mangrove and other coastal wetland ecosystems store substantial carbon in their soils and biomass, and their loss both releases stored carbon and removes a natural buffer against coastal erosion and storm impacts.",
+  "conditions": ["mangrove ecosystem", "coastal erosion risk", "habitat degradation"],
+  "metrics_affected": ["soil_organic_carbon", "habitat_connectivity", "pollution_risk"],
+  "evidence_text": "The IPCC Special Report on the Ocean and Cryosphere identifies mangroves, tidal marshes, and seagrass meadows as significant 'blue carbon' sinks, storing carbon in waterlogged sediments over long timescales. The report links degradation of these coastal ecosystems to increased vulnerability of adjacent land to sea-level rise, storm surge, and erosion, underscoring the coastal-protection co-benefit of restoring mangrove buffers alongside their carbon and habitat value."
+}

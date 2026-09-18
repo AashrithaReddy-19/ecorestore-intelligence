@@ -1,0 +1,13 @@
+{
+  "source_id": "FAO_RIPARIAN_001",
+  "organization": "FAO",
+  "title": "Riparian buffer management for water quality and erosion control",
+  "year": 2020,
+  "url": "https://www.fao.org/land-water/land/land-governance/land-resources-planning-toolbox/category/details/en/c/1032300/",
+  "topic_tags": ["riparian buffer", "erosion control", "sediment runoff"],
+  "ecosystem_tags": ["riparian", "wetland", "cropland", "grassland"],
+  "claim": "Vegetated riparian buffers intercept sediment and nutrient runoff from adjacent land before it reaches waterways, reducing erosion and protecting downstream aquatic habitat.",
+  "conditions": ["high rainfall", "degraded vegetation cover", "erosion risk"],
+  "metrics_affected": ["pollution_risk", "soil_moisture", "species_richness"],
+  "evidence_text": "FAO land and water management guidance documents that vegetated riparian buffers — strips of native vegetation maintained along waterways — trap sediment and filter nutrients carried by surface runoff, particularly important where upstream land is degraded or under high rainfall. Deep-rooted native buffer vegetation also stabilises banks against erosion, reducing sediment loading that would otherwise smother downstream aquatic habitat."
+}

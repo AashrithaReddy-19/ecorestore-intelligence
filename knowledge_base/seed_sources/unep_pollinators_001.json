@@ -1,0 +1,13 @@
+{
+  "source_id": "UNEP_POLLINATORS_001",
+  "organization": "UNEP",
+  "title": "Pollinators and their socio-economic importance",
+  "year": 2020,
+  "url": "https://www.unep.org/explore-topics/biodiversity/what-we-do/protecting-pollinators",
+  "topic_tags": ["pollinator decline", "native flowering strips", "pesticide biodiversity"],
+  "ecosystem_tags": ["cropland", "grassland"],
+  "claim": "Pollinator populations decline under combined pressure from habitat loss and pesticide exposure, and providing native flowering forage strips alongside reduced chemical use is recommended to support their recovery.",
+  "conditions": ["monoculture land use", "pesticide use", "low pollinator observations"],
+  "metrics_affected": ["species_richness", "soil_biodiversity"],
+  "evidence_text": "UNEP's pollinator programme reports that pollinator decline is driven by the combination of habitat simplification (loss of flowering forage and nesting sites in monoculture landscapes) and pesticide exposure. Recommended interventions include planting native flowering strips along field margins to restore forage and nesting resources, paired with reduced or more targeted pesticide use to lower non-target mortality."
+}

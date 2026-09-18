@@ -1,0 +1,13 @@
+{
+  "source_id": "UNEP_PLASTIC_001",
+  "organization": "UNEP",
+  "title": "Marine litter and plastic pollution assessment",
+  "year": 2021,
+  "url": "https://www.unep.org/explore-topics/oceans-seas/what-we-do/addressing-land-based-pollution/marine-litter-and-plastic",
+  "topic_tags": ["marine plastic pollution", "coastal water quality", "monitoring"],
+  "ecosystem_tags": ["mangrove", "coastal", "wetland"],
+  "claim": "Plastic and solid waste pollution in coastal and mangrove areas degrades habitat quality and is best addressed through combined source reduction and monitoring of affected zones.",
+  "conditions": ["coastal ecosystem", "plastic pollution", "low biodiversity observations"],
+  "metrics_affected": ["pollution_risk", "species_richness"],
+  "evidence_text": "UNEP's assessment of marine litter identifies coastal and mangrove areas near population centres and aquaculture operations as hotspots for plastic and solid-waste accumulation, which degrades water quality and smothers benthic and root-zone habitat. UNEP recommends establishing monitoring zones that track waste accumulation and water-quality indicators over time to target clean-up and source-reduction efforts where they are most needed."
+}

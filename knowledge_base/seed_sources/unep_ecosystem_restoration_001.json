@@ -1,0 +1,13 @@
+{
+  "source_id": "UNEP_ECOSYSTEM_RESTORATION_001",
+  "organization": "UNEP",
+  "title": "UN Decade on Ecosystem Restoration — principles for effective restoration",
+  "year": 2021,
+  "url": "https://www.decadeonrestoration.org/strategy",
+  "topic_tags": ["ecosystem restoration", "native species", "monitoring"],
+  "ecosystem_tags": ["mangrove", "wetland", "cropland", "grassland", "forest"],
+  "claim": "Effective ecosystem restoration prioritises native species matched to local site conditions and requires baseline and follow-up monitoring to confirm that interventions are producing measurable ecological change.",
+  "conditions": ["degraded land use", "low species observations"],
+  "metrics_affected": ["species_richness", "habitat_connectivity"],
+  "evidence_text": "The UN Decade on Ecosystem Restoration's ten restoration principles emphasise using native, locally-sourced species matched to site-specific soil, salinity, and hydrological conditions rather than generic planting, and stress that restoration outcomes must be verified through baseline and follow-up ecological monitoring rather than assumed from planting activity alone. This underpins the practice of pairing any restoration action with a monitoring and reporting (MRV) process."
+}

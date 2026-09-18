@@ -1,0 +1,13 @@
+{
+  "source_id": "IUCN_AQUACULTURE_001",
+  "organization": "IUCN",
+  "title": "Impacts of shrimp and fish aquaculture expansion on coastal wetlands",
+  "year": 2020,
+  "url": "https://www.iucn.org/our-work/topic/marine-and-coastal",
+  "topic_tags": ["aquaculture impact", "mangrove restoration", "salinity"],
+  "ecosystem_tags": ["mangrove", "coastal"],
+  "claim": "Unmanaged aquaculture pond expansion into mangrove areas raises localised soil salinity and fragments remaining habitat, and prioritising restoration of the most fragmented patches supports faster reconnection of nursery habitat.",
+  "conditions": ["mangrove ecosystem", "high soil salinity", "aquaculture expansion"],
+  "metrics_affected": ["habitat_connectivity", "species_richness", "soil_organic_carbon"],
+  "evidence_text": "IUCN coastal and marine programme assessments note that converting mangrove forest to aquaculture ponds alters natural tidal flushing, which can concentrate salts in adjacent soils and fragment the remaining mangrove stand into disconnected patches. Restoration efforts that prioritise the most isolated remaining patches for replanting are identified as an effective way to reconnect nursery habitat networks while aquaculture pressure is managed."
+}

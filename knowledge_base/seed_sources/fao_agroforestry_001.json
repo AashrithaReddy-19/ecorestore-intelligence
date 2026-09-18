@@ -1,0 +1,13 @@
+{
+  "source_id": "FAO_AGROFORESTRY_001",
+  "organization": "FAO",
+  "title": "Agroforestry for landscape restoration",
+  "year": 2021,
+  "url": "https://www.fao.org/forestry/agroforestry/en/",
+  "topic_tags": ["agroforestry", "soil moisture", "habitat connectivity", "climate resilience"],
+  "ecosystem_tags": ["cropland", "grassland"],
+  "claim": "Integrating trees and shrubs into cropland through agroforestry improves water infiltration and soil moisture retention while adding structural habitat that can connect otherwise isolated patches of vegetation.",
+  "conditions": ["degraded cropland", "irregular rainfall", "low tree cover"],
+  "metrics_affected": ["soil_moisture", "soil_organic_carbon", "habitat_connectivity"],
+  "evidence_text": "FAO's landscape restoration guidance describes agroforestry systems — trees integrated into cropland as rows, boundaries, or scattered cover — as a practice that increases root-zone water infiltration, reduces evapotranspiration losses, and builds soil organic matter over time. The added vertical vegetation structure also provides stepping-stone habitat that can partially reconnect fragmented natural areas within agricultural landscapes."
+}
