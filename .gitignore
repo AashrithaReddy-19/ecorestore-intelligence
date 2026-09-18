@@ -17,6 +17,7 @@ backend/*.db
 node_modules/
 frontend/dist/
 frontend/.vite/
+frontend/*.tsbuildinfo
 npm-debug.log*
 
 # Vector store / generated data
