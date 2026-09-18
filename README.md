@@ -295,11 +295,26 @@ npm run build     # production build check
 
 | Service | URL |
 |---|---|
-| Frontend (Vercel) | `<TO BE FILLED AFTER DEPLOYMENT>` |
-| Backend (Render) | `<TO BE FILLED AFTER DEPLOYMENT>` |
+| Frontend (Vercel) | https://ecorestore-intelligence.vercel.app |
+| Backend (Render) | `<pending — see note below>` |
 | API docs | `<backend URL>/docs` |
 
-See `docs/submission-notes.md` for exact deployment steps and environment variables.
+**Backend deployment status:** the backend is fully deploy-ready (`backend/Dockerfile`,
+`render.yaml` blueprint included) and has been verified locally end-to-end (health check,
+full Sundarbans assessment, evidence citations, clarifying questions, Docker Compose), but it
+was **not** deployed to Render from this build environment because no Render account
+credentials (API key or a logged-in Render CLI session) were available to it. To finish:
+
+1. Go to the Render dashboard → **New → Blueprint** → connect the
+   `AashrithaReddy-19/ecorestore-intelligence` GitHub repository. Render will detect
+   `render.yaml` and provision the web service + PostgreSQL database automatically.
+2. Once live, copy the backend's Render URL and:
+   - Set it as `VITE_API_BASE_URL` on the Vercel project (`ecorestore-intelligence`), then
+     redeploy (`vercel --prod` from `frontend/`, or trigger a redeploy in the Vercel dashboard).
+   - Set `CORS_ORIGINS=https://ecorestore-intelligence.vercel.app` on the Render service.
+3. Update this table and `docs/submission-notes.md` with the live backend URL.
+
+See `docs/submission-notes.md` for exact environment variables.
 
 ## 11. Limitations and responsible-AI safeguards
 

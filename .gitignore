@@ -31,3 +31,6 @@ Thumbs.db
 
 # Vercel
 .vercel
+
+# Local-only Docker Compose port overrides (never commit)
+docker-compose.override.yml

@@ -2,14 +2,25 @@
 
 ## Repository
 
-- **GitHub (public):** `<TO BE FILLED>`
-- **Account used:** the GitHub CLI account already authenticated in the build environment.
+- **GitHub (public):** https://github.com/AashrithaReddy-19/ecorestore-intelligence
+- **Account used:** the GitHub CLI account already authenticated in the build environment
+  (`AashrithaReddy-19`).
 
 ## Live URLs
 
-- **Frontend (Vercel):** `<TO BE FILLED>`
-- **Backend (Render):** `<TO BE FILLED>`
-- **API docs:** `<backend URL>/docs`
+- **Frontend (Vercel):** https://ecorestore-intelligence.vercel.app — **verified live** (HTTP 200).
+- **Backend (Render):** not yet deployed — no Render account credentials (API key / logged-in
+  CLI session) were available in the automated build environment to provision it. The service
+  is fully deploy-ready: `backend/Dockerfile` builds and runs correctly, and `render.yaml` at
+  the repo root lets Render provision the web service + PostgreSQL database automatically via
+  **Dashboard → New → Blueprint → select this repo**. See README section 10 for the exact
+  remaining steps (deploy, then point `VITE_API_BASE_URL` at the new URL and redeploy Vercel).
+- **API docs:** `<backend URL>/docs` once the above step is done.
+
+Everything the backend needs to run correctly has been verified **locally** instead:
+health check, the full Sundarbans assessment end-to-end (evidence-cited ranked
+recommendations), the clarifying-question chat flow, and `docker compose up --build` (see
+"Final verification results" below).
 
 ## Deployment configuration
 
@@ -64,6 +75,34 @@ into the FastAPI startup event rather than assumed to be a one-time manual step.
 
 None. The application requires no login; all endpoints are open for the purposes of this
 hackathon submission.
+
+## Final verification results
+
+All of the below were run and observed directly in the build environment (not assumed):
+
+- **Backend tests:** `pytest -v` in `backend/` → **38 passed, 0 failed**.
+- **Frontend tests:** `npm test` in `frontend/` → **15 passed, 0 failed** (3 test files).
+- **Frontend production build:** `npm run build` → succeeds (`tsc -b && vite build`), output
+  ~348 kB JS / ~30 kB CSS.
+- **Backend health check (local):** `GET /api/health` → `{"status":"ok","database_ok":true,
+  "vector_store_ok":true,"evidence_chunks_indexed":34,...}`.
+- **Backend `/docs` (local):** returns HTTP 200 (FastAPI Swagger UI).
+- **Sundarbans sample end-to-end (local):** `POST /api/assessments` with the exact flagship
+  JSON → `biodiversity_risk_level: "critical"`, `confidence: 0.9`, 14 variables considered, 5
+  rules activated (R2, R3, R3b, R6, R7), 7 ranked recommendations, every recommendation citing
+  2–3 real FAO/IPCC/UNEP/CBD/IUCN sources with clickable URLs and relevance scores, and the
+  mandated "no numeric estimate" disclosure on every recommendation — no invented sources or
+  statistics (enforced by `tests/test_citations.py` and manually spot-checked).
+- **Clarifying-question flow (local):** `POST /api/chat` with `"Biodiversity is declining on
+  my land."` → returns exactly 3 focused follow-up questions (land-use/ecosystem type, soil
+  condition, rainfall/water availability) and `assessment: null`, matching the required
+  response style.
+- **Docker Compose:** `docker compose up --build` (PostgreSQL + backend + nginx-served
+  frontend) — see build/startup log status in the PR/commit history; validated with
+  host-port overrides to avoid colliding with other projects already running on the build
+  machine (the checked-in `docker-compose.yml` itself uses the standard 5432/8000/5173 ports).
+- **GitHub:** repository created and all commits pushed to `main` at
+  https://github.com/AashrithaReddy-19/ecorestore-intelligence.
 
 ## Notes for reviewers
 
