@@ -6,10 +6,9 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     CHROMA_PERSIST_DIRECTORY=/app/knowledge_base/chroma_store
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential curl \
-    && rm -rf /var/lib/apt/lists/*
-
+# No apt-get/build-essential needed: every dependency below (including
+# psycopg[binary], chromadb, and sentence-transformers/torch) ships
+# prebuilt manylinux wheels for this base image, so nothing compiles here.
 COPY backend/requirements.txt ./requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 

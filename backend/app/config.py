@@ -14,10 +14,23 @@ BACKEND_DIR = Path(__file__).resolve().parent.parent
 PROJECT_ROOT = BACKEND_DIR.parent
 
 
+def _normalize_database_url(url: str) -> str:
+    """Route plain postgres(ql):// URLs (e.g. from Render/Heroku-style providers)
+    through the psycopg3 dialect, since that's the driver we install — it ships
+    prebuilt wheels and needs no pg_config/build toolchain, unlike psycopg2."""
+    if url.startswith("postgres://"):
+        url = "postgresql://" + url[len("postgres://") :]
+    if url.startswith("postgresql://"):
+        url = "postgresql+psycopg://" + url[len("postgresql://") :]
+    return url
+
+
 class Settings:
     def __init__(self) -> None:
-        self.database_url: str = os.getenv(
-            "DATABASE_URL", f"sqlite:///{(BACKEND_DIR / 'ecorestore.db').as_posix()}"
+        self.database_url: str = _normalize_database_url(
+            os.getenv(
+                "DATABASE_URL", f"sqlite:///{(BACKEND_DIR / 'ecorestore.db').as_posix()}"
+            )
         )
         self.llm_provider: str = os.getenv("LLM_PROVIDER", "none").lower()
         self.openai_api_key: str | None = os.getenv("OPENAI_API_KEY") or None
