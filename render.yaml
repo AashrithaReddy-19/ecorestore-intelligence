@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: ecorestore-intelligence-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    plan: free
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: ecorestore-intelligence-db
+          property: connectionString
+      - key: LLM_PROVIDER
+        value: none
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: CORS_ORIGINS
+        value: "*"
+      - key: CHROMA_PERSIST_DIRECTORY
+        value: /app/knowledge_base/chroma_store
+      - key: ENVIRONMENT
+        value: production
+    healthCheckPath: /api/health
+
+databases:
+  - name: ecorestore-intelligence-db
+    plan: free
+    databaseName: ecorestore
+    user: ecorestore
