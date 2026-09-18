@@ -20,10 +20,12 @@ ECOSYSTEM_KEYWORDS = {
     "dryland": ["dryland", "arid land", "semi-arid"],
 }
 
+# Order matters: checked in sequence against any sentence mentioning rain/rainfall,
+# so phrasing like "rainfall is irregular" matches just as well as "irregular rainfall".
 RAINFALL_KEYWORDS = {
-    "irregular": ["irregular rainfall", "erratic rainfall", "unpredictable rain"],
-    "low": ["low rainfall", "drought", "dry spell", "little rain"],
-    "high": ["high rainfall", "heavy rainfall", "excess rain", "flooding"],
+    "irregular": ["irregular", "erratic", "unpredictable"],
+    "low": ["drought", "dry spell", "little rain", "low", "scarce", "insufficient"],
+    "high": ["heavy", "excess", "flooding", "high", "abundant"],
 }
 
 HUMAN_IMPACT_KEYWORDS = [
@@ -53,10 +55,13 @@ def extract_facts_from_text(text: str) -> dict:
     if "monoculture" in lower:
         facts["land_use"] = "monoculture"
 
-    for pattern, value in RAINFALL_KEYWORDS.items():
-        if any(k in lower for k in value):
-            facts["rainfall_pattern"] = pattern
-            break
+    rain_sentences = [s for s in re.split(r"(?<=[.!?])\s+", lower) if "rain" in s]
+    rain_text = " ".join(rain_sentences)
+    if rain_text:
+        for pattern, keywords in RAINFALL_KEYWORDS.items():
+            if any(k in rain_text for k in keywords):
+                facts["rainfall_pattern"] = pattern
+                break
 
     if "salin" in lower:
         if "high salin" in lower:

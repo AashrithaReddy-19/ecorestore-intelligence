@@ -283,7 +283,11 @@ def run_assessment(data: dict) -> dict:
             any_evidence = True
             evidence_scores.extend(e["relevance_score"] for e in evidence)
 
-        metrics_for_this = sorted(support["metrics_affected"] or set(catalogue_entry.typical_metrics))
+        # Only claim metrics this specific intervention plausibly affects: intersect what
+        # the supporting rule(s) flagged with the catalogue's typical metrics for this
+        # action, rather than the full union across every rule that happened to recommend it.
+        relevant_metrics = support["metrics_affected"] & set(catalogue_entry.typical_metrics)
+        metrics_for_this = sorted(relevant_metrics or catalogue_entry.typical_metrics)
         impacted_metrics = []
         for metric in metrics_for_this:
             explanation = METRIC_EXPLANATIONS.get(
