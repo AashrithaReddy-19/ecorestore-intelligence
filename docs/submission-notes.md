@@ -8,19 +8,24 @@
 
 ## Live URLs
 
-- **Frontend (Vercel):** https://ecorestore-intelligence.vercel.app — **verified live** (HTTP 200).
-- **Backend (Render):** not yet deployed — no Render account credentials (API key / logged-in
-  CLI session) were available in the automated build environment to provision it. The service
-  is fully deploy-ready: `backend/Dockerfile` builds and runs correctly, and `render.yaml` at
-  the repo root lets Render provision the web service + PostgreSQL database automatically via
-  **Dashboard → New → Blueprint → select this repo**. See README section 10 for the exact
-  remaining steps (deploy, then point `VITE_API_BASE_URL` at the new URL and redeploy Vercel).
-- **API docs:** `<backend URL>/docs` once the above step is done.
+- **Frontend (Vercel):** https://ecorestore-intelligence.vercel.app — **verified live**.
+- **Backend (Render):** https://ecorestore-intelligence-backend-mzdz.onrender.com — **verified live**.
+- **API docs:** https://ecorestore-intelligence-backend-mzdz.onrender.com/docs — **verified live**.
 
-Everything the backend needs to run correctly has been verified **locally** instead:
-health check, the full Sundarbans assessment end-to-end (evidence-cited ranked
-recommendations), the clarifying-question chat flow, and `docker compose up --build` (see
-"Final verification results" below).
+Deployed via the Render API using `render.yaml`'s configuration (web service on the free
+Docker plan + a fresh free-tier PostgreSQL database, both under the
+`akshatshrivastava2000@gmail.com` Render account, matching the Vercel account used for the
+frontend). `EMBEDDING_BACKEND=hash` is set on the Render service because the free plan's
+512MB RAM cannot fit the full Sentence-Transformers/torch model at startup — it uses the
+app's built-in deterministic fallback embedding instead; the reasoning engine, evidence
+citations, and every other feature are unaffected. See README section 10 for details.
+
+Verified against the live deployment (not assumed): `/api/health` →
+`database_ok: true, vector_store_ok: true, evidence_chunks_indexed: 34`; `/docs` renders;
+`/api/evidence/search` returns real cited results; the full Sundarbans assessment returns
+`critical` risk with 5 activated rules and 7 ranked, evidence-cited recommendations; a CORS
+preflight check confirms the backend allows the exact Vercel origin; and the deployed
+frontend's built JS bundle was inspected directly and confirmed to call this backend URL.
 
 ## Deployment configuration
 
@@ -65,11 +70,19 @@ into the FastAPI startup event rather than assumed to be a one-time manual step.
 
 ## Post-deployment verification checklist
 
-- [ ] `GET <backend URL>/api/health` returns `"status": "ok"`.
-- [ ] Frontend loads and successfully calls the deployed backend (no CORS errors).
-- [ ] The Sundarbans sample scenario runs end-to-end from Assessment → Recovery Plan.
-- [ ] Evidence citations are visible and link to real FAO/IPCC/UNEP/CBD/IUCN pages.
-- [ ] `<backend URL>/docs` renders the FastAPI interactive documentation.
+- [x] `GET <backend URL>/api/health` returns `"status": "ok"`.
+- [x] Frontend loads and successfully calls the deployed backend (no CORS errors — verified
+      via a live CORS preflight check and by inspecting the deployed JS bundle).
+- [x] The Sundarbans sample scenario runs end-to-end from Assessment → Recovery Plan
+      (verified via the live API: `critical` risk, 5 rules, 7 cited recommendations).
+- [x] Evidence citations are visible and link to real FAO/IPCC/UNEP/CBD/IUCN pages.
+- [x] `<backend URL>/docs` renders the FastAPI interactive documentation.
+
+**Note on the free-tier database:** Render's free PostgreSQL plan expires 30 days after
+creation (per Render's own policy, visible as `expiresAt` in its API response). If it has
+expired, recreate it via the `render.yaml` Blueprint, or unset `DATABASE_URL` on the backend
+service to fall back to SQLite (fully supported, no functionality lost besides data
+persisting across restarts).
 
 ## Demo credentials
 
@@ -119,6 +132,14 @@ All of the below were run and observed directly in the build environment (not as
   estimate.
 - **GitHub:** repository created and all commits pushed to `main` at
   https://github.com/AashrithaReddy-19/ecorestore-intelligence.
+- **Live Render deployment:** `/api/health` → `{"status":"ok","database_ok":true,
+  "vector_store_ok":true,"evidence_chunks_indexed":34,"environment":"production"}`; `/docs` →
+  HTTP 200; `/api/evidence/search` returned real cited results; the Sundarbans assessment
+  returned `critical` risk with 5 activated rules and 7 cited recommendations, matching the
+  local/Docker runs exactly; a CORS preflight from the Vercel origin succeeded.
+- **Live Vercel deployment:** redeployed with `VITE_API_BASE_URL` pointed at the live Render
+  backend; the deployed JS bundle was fetched and confirmed to reference that exact backend
+  URL, and the production alias (https://ecorestore-intelligence.vercel.app) serves it.
 
 ## Notes for reviewers
 

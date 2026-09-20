@@ -110,6 +110,10 @@ flowchart TD
   (`tests/test_citations.py` enforces this). If no evidence supports a numeric estimate, the
   API returns the literal sentence: *"A site-specific numerical estimate is not provided
   because the retrieved evidence does not establish one for these conditions."*
+- `EMBEDDING_BACKEND` controls which embedding is used: `auto` (default) loads the real
+  Sentence-Transformers `all-MiniLM-L6-v2` model; `hash` skips that import entirely and uses a
+  deterministic hashed embedding instead, for memory-constrained hosts (e.g. Render's free
+  512MB web service tier — see §10).
 
 ## 4. Multi-metric reasoning design
 
@@ -306,29 +310,28 @@ npm run build     # production build check
 
 | Service | URL |
 |---|---|
-| Frontend (Vercel) | https://ecorestore-intelligence.vercel.app (verified live, HTTP 200) |
-| Backend (Render) | `<pending — see note below>` |
-| API docs | `<backend URL>/docs` |
+| Frontend (Vercel) | https://ecorestore-intelligence.vercel.app — **verified live** |
+| Backend (Render) | https://ecorestore-intelligence-backend-mzdz.onrender.com — **verified live** |
+| API docs | https://ecorestore-intelligence-backend-mzdz.onrender.com/docs — **verified live** |
 
-**Backend deployment status:** the backend is fully deploy-ready (`backend/Dockerfile` uses
-`psycopg[binary]` — prebuilt wheels, no system build toolchain required — and a CPU-only
-torch install to avoid pulling multi-GB CUDA packages; `render.yaml` blueprint included) and
-has been verified locally end-to-end (health check, full Sundarbans assessment with 5
-activated rules and cited recommendations, evidence citations, clarifying-question chat flow,
-and a full `docker compose up --build` run with all three containers healthy). It was **not**
-deployed to Render from this build environment because no Render account credentials (API key
-or a logged-in Render CLI session) were available to it. To finish:
+**Verified end-to-end:** `GET /api/health` returns `database_ok: true`, `vector_store_ok:
+true`, `evidence_chunks_indexed: 34`; `/docs` renders; `POST /api/assessments` with the
+Sundarbans sample returns `critical` risk with 5 activated rules and 7 cited recommendations;
+CORS correctly allows the Vercel origin; the deployed frontend bundle calls this exact backend
+URL.
 
-1. Go to the Render dashboard → **New → Blueprint** → connect the
-   `AashrithaReddy-19/ecorestore-intelligence` GitHub repository. Render will detect
-   `render.yaml` and provision the web service + PostgreSQL database automatically.
-2. Once live, copy the backend's Render URL and:
-   - Set it as `VITE_API_BASE_URL` on the Vercel project (`ecorestore-intelligence`), then
-     redeploy (`vercel --prod` from `frontend/`, or trigger a redeploy in the Vercel dashboard).
-   - Set `CORS_ORIGINS=https://ecorestore-intelligence.vercel.app` on the Render service.
-3. Update this table and `docs/submission-notes.md` with the live backend URL.
+**Database:** Render PostgreSQL (free tier, `ecorestore-intelligence-db`), created fresh for
+this project. Render allows only one free-tier database per account — note that this expires
+30 days after creation (Render's free-tier policy); recreate it via the `render.yaml`
+Blueprint or reduce to SQLite (unset `DATABASE_URL`) if it lapses.
 
-See `docs/submission-notes.md` for exact environment variables.
+**Memory note:** Render's free web service plan has 512MB RAM, which cannot fit the full
+Sentence-Transformers/torch model at startup. The deployed backend runs with
+`EMBEDDING_BACKEND=hash` (see §3), using the app's built-in deterministic fallback embedding
+for retrieval instead of the full semantic model. Local development and Docker Compose use the
+full model by default (`EMBEDDING_BACKEND=auto`). All other functionality — the deterministic
+reasoning engine, evidence citations, MRV tracking, and all four frontend pages — is identical
+in both modes.
 
 ## 11. Limitations and responsible-AI safeguards
 
