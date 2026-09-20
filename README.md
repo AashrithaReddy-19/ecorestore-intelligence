@@ -271,6 +271,17 @@ persisted Chroma volume on first boot), and the Vite-built frontend behind nginx
 - Frontend: http://localhost:5173
 - Backend: http://localhost:8000 (docs at `/docs`)
 
+If ports 5432/8000/5173 are already in use on your machine, override the host ports without
+editing the compose file by setting `DB_HOST_PORT`, `BACKEND_HOST_PORT`, and/or
+`FRONTEND_HOST_PORT` in a local `.env` (git-ignored) — the container-internal ports are
+unaffected. This was used and verified during development (see section 10).
+
+**Verified:** `docker compose up --build` was run end-to-end during development — all three
+containers reached a healthy/running state, `/api/health` and `/docs` responded correctly,
+`/api/evidence/search` returned real cited results, the full Sundarbans assessment produced
+a `critical` risk rating with 5 activated rules and 7 ranked, evidence-cited recommendations,
+and the chat clarification flow returned the expected 3 focused follow-up questions.
+
 ## 8. Test commands
 
 ```bash
@@ -295,15 +306,18 @@ npm run build     # production build check
 
 | Service | URL |
 |---|---|
-| Frontend (Vercel) | https://ecorestore-intelligence.vercel.app |
+| Frontend (Vercel) | https://ecorestore-intelligence.vercel.app (verified live, HTTP 200) |
 | Backend (Render) | `<pending — see note below>` |
 | API docs | `<backend URL>/docs` |
 
-**Backend deployment status:** the backend is fully deploy-ready (`backend/Dockerfile`,
-`render.yaml` blueprint included) and has been verified locally end-to-end (health check,
-full Sundarbans assessment, evidence citations, clarifying questions, Docker Compose), but it
-was **not** deployed to Render from this build environment because no Render account
-credentials (API key or a logged-in Render CLI session) were available to it. To finish:
+**Backend deployment status:** the backend is fully deploy-ready (`backend/Dockerfile` uses
+`psycopg[binary]` — prebuilt wheels, no system build toolchain required — and a CPU-only
+torch install to avoid pulling multi-GB CUDA packages; `render.yaml` blueprint included) and
+has been verified locally end-to-end (health check, full Sundarbans assessment with 5
+activated rules and cited recommendations, evidence citations, clarifying-question chat flow,
+and a full `docker compose up --build` run with all three containers healthy). It was **not**
+deployed to Render from this build environment because no Render account credentials (API key
+or a logged-in Render CLI session) were available to it. To finish:
 
 1. Go to the Render dashboard → **New → Blueprint** → connect the
    `AashrithaReddy-19/ecorestore-intelligence` GitHub repository. Render will detect
@@ -337,8 +351,11 @@ See `docs/submission-notes.md` for exact environment variables.
 - **Knowledge base scope.** The seed knowledge base (`knowledge_base/seed_sources/`) is a
   small, curated set of paraphrased claims from FAO/IPCC/UNEP/CBD/IUCN public guidance,
   intended to demonstrate a genuine RAG pipeline for this challenge — it is not exhaustive,
-  and source URLs point to the organizations' general topic pages rather than being presented
-  as a formal citation index.
+  and source URLs point to the organizations' general topic/report pages rather than being
+  presented as a formal citation index. All 17 source URLs were individually checked to
+  return a live HTTP 200 with content matching the paraphrased claim (not a soft-redirect to
+  a generic landing page) as part of the pre-submission evidence audit; a handful of URLs
+  that had moved were corrected and re-verified during that audit.
 
 ---
 

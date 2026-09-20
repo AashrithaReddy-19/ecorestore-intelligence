@@ -97,10 +97,26 @@ All of the below were run and observed directly in the build environment (not as
   my land."` → returns exactly 3 focused follow-up questions (land-use/ecosystem type, soil
   condition, rainfall/water availability) and `assessment: null`, matching the required
   response style.
-- **Docker Compose:** `docker compose up --build` (PostgreSQL + backend + nginx-served
-  frontend) — see build/startup log status in the PR/commit history; validated with
-  host-port overrides to avoid colliding with other projects already running on the build
-  machine (the checked-in `docker-compose.yml` itself uses the standard 5432/8000/5173 ports).
+- **Docker Compose:** `docker compose -p ecorestore-intelligence up --build -d` succeeded —
+  all three containers (`db`, `backend`, `frontend`) reached a healthy/running state. Verified
+  against the running stack: `GET /api/health` → `{"status":"ok","database_ok":true,
+  "vector_store_ok":true,"evidence_chunks_indexed":34,"environment":"docker"}`; `/docs` → HTTP
+  200; `/api/evidence/search?q=mangrove restoration` returned real cited results; the full
+  Sundarbans assessment returned the same `critical`/5-rules/7-recommendations result as the
+  local run; the clarifying-question chat flow returned the same 3 focused questions. Run with
+  host-port overrides (`DB_HOST_PORT`/`BACKEND_HOST_PORT`/`FRONTEND_HOST_PORT` in a local,
+  git-ignored `.env`) to avoid colliding with other projects already running on the build
+  machine — the checked-in `docker-compose.yml` defaults to the standard 5432/8000/5173 ports
+  when those variables are unset.
+- **Evidence source audit:** all 17 `knowledge_base/seed_sources/*.json` records were checked
+  individually — organization, title, and URL verified live (HTTP 200, with actual page
+  content matching the paraphrased claim rather than a soft-redirect to a generic landing
+  page). 9 records had a stale or moved URL (mostly FAO/UNEP/IUCN site restructuring) and were
+  corrected to a verified current page from the same organization, with `title`/`year`
+  updated to match and `claim`/`evidence_text` re-paraphrased to accurately reflect that
+  page's actual content; `year` was set to `null` where a page has no stated publication date
+  rather than asserting an unverifiable one. No record asserts a specific numeric improvement
+  estimate.
 - **GitHub:** repository created and all commits pushed to `main` at
   https://github.com/AashrithaReddy-19/ecorestore-intelligence.
 
