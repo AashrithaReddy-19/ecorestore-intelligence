@@ -1,13 +1,13 @@
 {
   "source_id": "UNEP_POLLINATORS_001",
   "organization": "UNEP",
-  "title": "Pollinators and their socio-economic importance",
-  "year": 2020,
-  "url": "https://www.unep.org/explore-topics/biodiversity/what-we-do/protecting-pollinators",
+  "title": "2019 Visual Booklet on Pollinators and Pesticides: Keeping Our Bees Safe",
+  "year": 2019,
+  "url": "https://www.unep.org/resources/report/2019-visual-booklet-pollinators-and-pesticides-keeping-our-bees-safe",
   "topic_tags": ["pollinator decline", "native flowering strips", "pesticide biodiversity"],
   "ecosystem_tags": ["cropland", "grassland"],
-  "claim": "Pollinator populations decline under combined pressure from habitat loss and pesticide exposure, and providing native flowering forage strips alongside reduced chemical use is recommended to support their recovery.",
+  "claim": "Widely used pesticides such as neonicotinoids harm bee health, and UNEP recommends farmers eliminate bee-harming pesticides, plant native flowering plants that provide nectar and pollen through the bloom season, and build nesting sites to help pollinators thrive.",
   "conditions": ["monoculture land use", "pesticide use", "low pollinator observations"],
   "metrics_affected": ["species_richness", "soil_biodiversity"],
-  "evidence_text": "UNEP's pollinator programme reports that pollinator decline is driven by the combination of habitat simplification (loss of flowering forage and nesting sites in monoculture landscapes) and pesticide exposure. Recommended interventions include planting native flowering strips along field margins to restore forage and nesting resources, paired with reduced or more targeted pesticide use to lower non-target mortality."
+  "evidence_text": "UNEP's booklet on pollinators and pesticides reports that neonicotinoids, among the world's most widely used insecticides, can affect honey bee reproduction and colony health. To make agriculture more bee-friendly, UNEP recommends that farmers eliminate bee-harming pesticides, plant native flowering species that provide nectar and pollen throughout the bloom season, and build nesting sites, recognising that more than three-quarters of food crops rely at least partly on insect and animal pollination."
 }

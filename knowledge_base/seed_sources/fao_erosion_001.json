@@ -1,13 +1,13 @@
 {
   "source_id": "FAO_EROSION_001",
   "organization": "FAO",
-  "title": "Sustainable soil management for erosion control",
-  "year": 2019,
-  "url": "https://www.fao.org/soils-portal/soil-degradation-restoration/erosion/en/",
+  "title": "Soil Conservation",
+  "year": null,
+  "url": "https://www.fao.org/soils-portal/soil-management/soil-conservation/en/",
   "topic_tags": ["erosion control", "ground cover", "sediment runoff"],
   "ecosystem_tags": ["cropland", "grassland", "riparian"],
-  "claim": "Maintaining native, deep-rooted ground cover on exposed or degraded slopes reduces surface runoff velocity and sediment loss compared with bare or sparsely vegetated soil.",
+  "claim": "Reversing soil degradation through appropriate land management and conservation practices, including maintaining ground cover on exposed or degraded land, is identified by FAO as essential for preventing erosion and restoring degraded soils.",
   "conditions": ["degraded vegetation cover", "high rainfall", "bare or exposed soil"],
   "metrics_affected": ["soil_moisture", "pollution_risk"],
-  "evidence_text": "FAO sustainable soil management guidance identifies continuous ground cover as one of the most effective practical measures against erosion: root networks physically bind topsoil and above-ground cover slows the velocity of surface runoff, both of which reduce sediment loss. The guidance recommends prioritising fast-establishing native groundcover species on slopes and bare patches most exposed to high-intensity rainfall."
+  "evidence_text": "FAO's soil conservation guidance frames reversing soil degradation through appropriate land management as vital for food security, identifying soil conservation as involving erosion prevention, fertility maintenance, and restoration of degraded land through approaches such as conservation agriculture and integrated nutrient management. Documented regional techniques (compiled with partners such as WOCAT) commonly prioritise fast-establishing ground cover on slopes and bare patches most exposed to runoff."
 }

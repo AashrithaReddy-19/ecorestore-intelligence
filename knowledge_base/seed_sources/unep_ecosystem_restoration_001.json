@@ -1,13 +1,13 @@
 {
   "source_id": "UNEP_ECOSYSTEM_RESTORATION_001",
   "organization": "UNEP",
-  "title": "UN Decade on Ecosystem Restoration — principles for effective restoration",
-  "year": 2021,
-  "url": "https://www.decadeonrestoration.org/strategy",
+  "title": "Panel unveils 10 guiding principles in campaign to revive the Earth",
+  "year": null,
+  "url": "https://www.unep.org/news-and-stories/story/panel-unveils-10-guiding-principles-campaign-revive-earth",
   "topic_tags": ["ecosystem restoration", "native species", "monitoring"],
   "ecosystem_tags": ["mangrove", "wetland", "cropland", "grassland", "forest"],
-  "claim": "Effective ecosystem restoration prioritises native species matched to local site conditions and requires baseline and follow-up monitoring to confirm that interventions are producing measurable ecological change.",
+  "claim": "UN Decade on Ecosystem Restoration partners developed ten guiding principles for restoration to maximise net gain for native biodiversity and ecosystem health, cautioning that introducing non-native species can cause further degradation and that restoration must be tailored to local site conditions.",
   "conditions": ["degraded land use", "low species observations"],
   "metrics_affected": ["species_richness", "habitat_connectivity"],
-  "evidence_text": "The UN Decade on Ecosystem Restoration's ten restoration principles emphasise using native, locally-sourced species matched to site-specific soil, salinity, and hydrological conditions rather than generic planting, and stress that restoration outcomes must be verified through baseline and follow-up ecological monitoring rather than assumed from planting activity alone. This underpins the practice of pairing any restoration action with a monitoring and reporting (MRV) process."
+  "evidence_text": "UN Decade on Ecosystem Restoration partners, through a consultative process involving more than 400 experts, developed ten principles for ecosystem restoration to create a shared vision and increase the likelihood of achieving the highest level of ecological recovery possible. The principles caution that introducing trees or other species not native to the local environment can lead to further degradation, underscoring that restoration needs to be tailored to local site conditions rather than applying generic planting approaches."
 }

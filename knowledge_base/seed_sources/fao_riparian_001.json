@@ -1,13 +1,13 @@
 {
   "source_id": "FAO_RIPARIAN_001",
   "organization": "FAO",
-  "title": "Riparian buffer management for water quality and erosion control",
-  "year": 2020,
-  "url": "https://www.fao.org/land-water/land/land-governance/land-resources-planning-toolbox/category/details/en/c/1032300/",
+  "title": "Agroforestry practices — Riparian forest buffers",
+  "year": 2010,
+  "url": "https://www.fao.org/sustainable-forest-management/toolbox/tools/tool-detail/en/c/422631/",
   "topic_tags": ["riparian buffer", "erosion control", "sediment runoff"],
   "ecosystem_tags": ["riparian", "wetland", "cropland", "grassland"],
-  "claim": "Vegetated riparian buffers intercept sediment and nutrient runoff from adjacent land before it reaches waterways, reducing erosion and protecting downstream aquatic habitat.",
+  "claim": "Riparian forest buffers — streamside plantings of trees, shrubs, and grasses — buffer non-point source pollution of waterways from adjacent land and reduce streambank erosion, while also enhancing wildlife habitat.",
   "conditions": ["high rainfall", "degraded vegetation cover", "erosion risk"],
   "metrics_affected": ["pollution_risk", "soil_moisture", "species_richness"],
-  "evidence_text": "FAO land and water management guidance documents that vegetated riparian buffers — strips of native vegetation maintained along waterways — trap sediment and filter nutrients carried by surface runoff, particularly important where upstream land is degraded or under high rainfall. Deep-rooted native buffer vegetation also stabilises banks against erosion, reducing sediment loading that would otherwise smother downstream aquatic habitat."
+  "evidence_text": "FAO's Sustainable Forest Management Toolbox describes riparian forest buffers as natural or re-established streamside plantings of trees, shrubs, and grasses that buffer non-point source pollution of waterways from adjacent land and reduce streambank erosion. Beyond water-quality protection, these buffers provide wildlife habitat enhancement and, in some designs, opportunities for compatible product harvesting alongside their conservation function."
 }

@@ -1,13 +1,13 @@
 {
   "source_id": "CBD_WETLAND_001",
   "organization": "CBD",
-  "title": "Wetland ecosystem restoration guidance",
-  "year": 2018,
+  "title": "The Ecosystem Approach",
+  "year": null,
   "url": "https://www.cbd.int/ecosystem/",
   "topic_tags": ["wetland restoration", "hydrology restoration", "fragmented wetland"],
   "ecosystem_tags": ["wetland", "mangrove", "riparian"],
-  "claim": "Restoring the natural hydrology of drained or degraded wetlands, alongside revegetation with native hydrophytic species, is a recommended approach for reversing wetland biodiversity loss.",
+  "claim": "CBD's Ecosystem Approach — the Convention's primary framework for ecosystem management — treats land, water, and living resources as an integrated system, supporting restoration approaches for wetlands that address hydrology and water flow alongside vegetation rather than replanting in isolation.",
   "conditions": ["wetland ecosystem", "high habitat fragmentation", "degraded land use"],
   "metrics_affected": ["habitat_connectivity", "soil_moisture", "species_richness"],
-  "evidence_text": "CBD ecosystem restoration guidance highlights that wetland degradation is frequently driven by disrupted hydrology — altered water inflow from drainage, diversion, or surrounding land-use change — rather than vegetation loss alone. Effective restoration therefore prioritises re-establishing natural water flow paths before or alongside revegetation with native wetland species, particularly where fragmentation has isolated remaining wetland patches from their original hydrological network."
+  "evidence_text": "The Convention on Biological Diversity's Ecosystem Approach is described as a strategy for the integrated management of land, water, and living resources that promotes conservation and sustainable use in an equitable way, and serves as the Convention's primary framework for action. Applied to wetlands, this integrated framing supports restoration that considers a site's water flow and hydrological connections alongside its vegetation, rather than treating revegetation as sufficient on its own, particularly where fragmentation has isolated remaining wetland patches."
 }

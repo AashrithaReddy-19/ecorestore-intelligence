@@ -1,13 +1,13 @@
 {
   "source_id": "CBD_SPECIES_RICHNESS_001",
   "organization": "CBD",
-  "title": "Habitat heterogeneity and species richness in managed landscapes",
-  "year": 2020,
+  "title": "Agricultural Biodiversity",
+  "year": null,
   "url": "https://www.cbd.int/agro/",
   "topic_tags": ["species richness", "habitat structure", "agricultural biodiversity"],
   "ecosystem_tags": ["cropland", "grassland"],
-  "claim": "Increasing structural and floral diversity within managed landscapes, such as through flowering strips and agroforestry, is associated with greater observed species richness compared with uniform monoculture.",
+  "claim": "CBD's agricultural biodiversity programme frames crop diversity, pollinators, and soil biodiversity as central to a sustainable agriculture transition, supporting practical measures that diversify managed landscapes as a lever where species observations are low.",
   "conditions": ["monoculture land use", "low species observations", "low habitat structure"],
   "metrics_affected": ["species_richness", "soil_biodiversity"],
-  "evidence_text": "CBD guidance on agricultural biodiversity notes that structurally uniform monoculture landscapes typically support fewer species than landscapes with added habitat heterogeneity, such as flowering margins, hedgerows, or scattered trees. Introducing this structural and floral diversity is consistently associated with increased use by pollinators, birds, and other taxa, making it a practical lever where species observations are currently low."
+  "evidence_text": "The Convention on Biological Diversity's agricultural biodiversity programme addresses the importance of agricultural biodiversity to food production and ecosystem services, covering crop diversity, pollinators, and soil biodiversity within the context of a sustainable agriculture transition. This framing supports diversifying otherwise structurally uniform managed landscapes as a practical route to increasing biodiversity where current species or pollinator observations are low."
 }

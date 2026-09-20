@@ -1,13 +1,13 @@
 {
   "source_id": "IUCN_MANGROVE_001",
   "organization": "IUCN",
-  "title": "Mangroves and coastal ecosystems — issues brief",
-  "year": 2021,
-  "url": "https://www.iucn.org/resources/issues-brief/mangroves-and-coastal-ecosystems",
-  "topic_tags": ["mangrove restoration", "coastal resilience", "nursery habitat", "aquaculture impact"],
+  "title": "More than half of all mangrove ecosystems at risk of collapse by 2050, first global assessment finds",
+  "year": 2024,
+  "url": "https://iucn.org/press-release/202405/more-half-all-mangrove-ecosystems-risk-collapse-2050-first-global-assessment",
+  "topic_tags": ["mangrove restoration", "coastal resilience", "nursery habitat", "blue carbon"],
   "ecosystem_tags": ["mangrove", "coastal"],
-  "claim": "Mangrove forests provide nursery habitat for fish and crustaceans and buffer coastlines from erosion, but are under sustained pressure from aquaculture expansion and land conversion, making native replanting a priority restoration action.",
+  "claim": "IUCN's first global Red List assessment of mangrove ecosystems finds a majority at risk of collapse from deforestation, development, pollution, and sea-level rise, underscoring mangroves' critical role in coastal protection, carbon storage, and fishery support and the priority of restoring degraded stands.",
   "conditions": ["mangrove ecosystem", "aquaculture expansion", "coastal habitat loss"],
   "metrics_affected": ["habitat_connectivity", "species_richness", "pollution_risk"],
-  "evidence_text": "IUCN identifies conversion of mangrove forest to aquaculture ponds as one of the leading drivers of mangrove loss globally, removing nursery habitat that supports coastal fisheries and reducing natural buffering against storms and erosion. Restoration approaches favoured by IUCN prioritise replanting native mangrove species matched to local tidal and salinity conditions, focusing first on the most fragmented remaining patches to reconnect nursery habitat corridors."
+  "evidence_text": "IUCN's first global Red List of Ecosystems assessment of the world's mangroves found a majority of assessed mangrove ecosystems at risk of collapse, driven by deforestation, coastal development, pollution, altered freshwater and sediment flows from dam construction, and climate-driven sea-level rise. The assessment underscores mangroves' role in protecting coastal communities from flooding, storing carbon, and supporting fisheries, reinforcing native mangrove restoration and buffer replanting as a priority response where mangrove edges are degraded."
 }

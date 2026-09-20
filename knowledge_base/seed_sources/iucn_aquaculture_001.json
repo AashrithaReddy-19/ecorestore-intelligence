@@ -1,13 +1,13 @@
 {
   "source_id": "IUCN_AQUACULTURE_001",
   "organization": "IUCN",
-  "title": "Impacts of shrimp and fish aquaculture expansion on coastal wetlands",
-  "year": 2020,
-  "url": "https://www.iucn.org/our-work/topic/marine-and-coastal",
+  "title": "Red List of Mangrove Ecosystems",
+  "year": 2024,
+  "url": "https://iucn.org/resources/conservation-tool/iucn-red-list-ecosystems/red-list-mangrove-ecosystems",
   "topic_tags": ["aquaculture impact", "mangrove restoration", "salinity"],
   "ecosystem_tags": ["mangrove", "coastal"],
-  "claim": "Unmanaged aquaculture pond expansion into mangrove areas raises localised soil salinity and fragments remaining habitat, and prioritising restoration of the most fragmented patches supports faster reconnection of nursery habitat.",
+  "claim": "IUCN's Red List of Mangrove Ecosystems identifies deforestation for agriculture and shrimp/fish aquaculture as a historical and ongoing driver of mangrove degradation, alongside altered freshwater and sediment flows, making fragmented mangrove patches near aquaculture expansion a priority for restoration.",
   "conditions": ["mangrove ecosystem", "high soil salinity", "aquaculture expansion"],
   "metrics_affected": ["habitat_connectivity", "species_richness", "soil_organic_carbon"],
-  "evidence_text": "IUCN coastal and marine programme assessments note that converting mangrove forest to aquaculture ponds alters natural tidal flushing, which can concentrate salts in adjacent soils and fragment the remaining mangrove stand into disconnected patches. Restoration efforts that prioritise the most isolated remaining patches for replanting are identified as an effective way to reconnect nursery habitat networks while aquaculture pressure is managed."
+  "evidence_text": "IUCN's Red List of Mangrove Ecosystems assessment identifies deforestation for agricultural conversion and shrimp/fish aquaculture as historical drivers of mangrove degradation, alongside changes in freshwater and sediment supply from dam construction and irrigation. The assessment notes that threats to mangroves are evolving, with sea-level rise now the dominant pressure in many regions, but that direct human conversion pressure, including aquaculture expansion, continues to fragment remaining mangrove stands at variable rates across regions."
 }

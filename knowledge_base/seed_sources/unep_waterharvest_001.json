@@ -1,13 +1,13 @@
 {
   "source_id": "UNEP_WATERHARVEST_001",
   "organization": "UNEP",
-  "title": "Ecosystem-based adaptation and small-scale water retention",
-  "year": 2019,
-  "url": "https://www.unep.org/explore-topics/climate-action/what-we-do/climate-adaptation/ecosystem-based-adaptation",
+  "title": "Rainwater Harvesting: A Lifeline for Human Well-Being",
+  "year": 2009,
+  "url": "https://www.unep.org/resources/report/rainwater-harvesting-lifeline-human-well-being",
   "topic_tags": ["rainwater harvesting", "water retention structures", "drought resilience agriculture"],
   "ecosystem_tags": ["cropland", "grassland", "dryland"],
-  "claim": "Small-scale water-retention structures such as farm ponds and contour trenches help capture irregular rainfall for use during dry periods, reducing drought stress on vegetation and soil organisms.",
+  "claim": "Small-scale, decentralised rainwater harvesting and retention infrastructure, such as earth ponds, stone dikes, and cisterns, can increase water availability and rehabilitate watersheds without eroding the ecosystem functions water serves in the local landscape.",
   "conditions": ["irregular rainfall", "low soil moisture", "rising temperature trend"],
   "metrics_affected": ["soil_moisture", "soil_organic_carbon"],
-  "evidence_text": "UNEP's ecosystem-based adaptation guidance recommends small-scale water-harvesting infrastructure — farm ponds, check dams, and contour trenches — as low-cost measures to capture rainfall during wet periods and make it available during dry spells. This is highlighted as increasingly important where rainfall is becoming more irregular and temperatures are rising, both of which increase soil moisture deficits between rain events."
+  "evidence_text": "UNEP and the Stockholm Environment Institute's report on rainwater harvesting examines the potential for greater use of small-scale, decentralised rainfall harvesting and storage within integrated water resource management. It documents that ecologically sensitive rainwater retention infrastructure — earth ponds, stone dikes, and cisterns — has helped rehabilitate watersheds and improve water use efficiency and availability, putting into practice ecosystem-based approaches to climate adaptation."
 }

@@ -1,13 +1,13 @@
 {
   "source_id": "FAO_SOC_001",
   "organization": "FAO",
-  "title": "Soil organic carbon: the hidden potential",
-  "year": 2017,
-  "url": "https://www.fao.org/soils-portal/soil-management/soil-organic-carbon/en/",
-  "topic_tags": ["soil organic carbon", "agriculture", "soil biodiversity", "cover crops"],
+  "title": "Global Soil Organic Carbon Map (GSOCmap)",
+  "year": null,
+  "url": "https://www.fao.org/soils-portal/data-hub/soil-maps-and-databases/global-soil-organic-carbon-map-gsocmap/en/",
+  "topic_tags": ["soil organic carbon", "agriculture", "soil biodiversity", "monitoring"],
   "ecosystem_tags": ["cropland"],
-  "claim": "Maintaining ground cover and adding organic matter, such as through cover crops and residue retention, helps rebuild depleted soil organic carbon and the microbial and invertebrate communities that depend on it.",
+  "claim": "Monitoring and mapping soil organic carbon, as FAO's Global Soil Organic Carbon Map does at national and global scale, provides the baseline data needed to identify degraded soils and set realistic targets for rebuilding lost carbon stocks through land management change.",
   "conditions": ["low soil organic carbon", "cropland", "monoculture land use"],
   "metrics_affected": ["soil_organic_carbon", "soil_biodiversity", "soil_moisture"],
-  "evidence_text": "FAO's soil organic carbon guidance identifies continuous soil cover, crop residue retention, and diversified cropping (including cover crops and legumes) as core practices for rebuilding organic carbon stocks that have been depleted by intensive monoculture. Soil organic carbon underpins water retention capacity and supports the soil biodiversity that drives nutrient cycling, so its depletion under continuous cropping without residue return is a widely documented risk on degraded agricultural land."
+  "evidence_text": "FAO's Global Soil Organic Carbon Map (GSOCmap) was produced through a consultative process involving FAO member countries to establish a global baseline of soil organic carbon distribution. The map is intended to help land managers and policymakers identify degraded areas, set soil organic carbon restoration targets, and evaluate the sequestration potential of land management practices that rebuild organic matter, such as reduced tillage and residue retention, over time."
 }
