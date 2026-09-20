@@ -25,6 +25,11 @@ class EmbeddingModel:
     def _ensure_loaded(self) -> None:
         if self._model is not None or self._use_fallback:
             return
+        if self.settings.embedding_backend == "hash":
+            # Skip importing sentence_transformers/torch altogether so this
+            # process never allocates the memory needed to load them.
+            self._use_fallback = True
+            return
         try:
             from sentence_transformers import SentenceTransformer
 

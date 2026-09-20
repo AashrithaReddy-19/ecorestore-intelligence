@@ -50,6 +50,12 @@ class Settings:
         self.embedding_model_name: str = os.getenv(
             "EMBEDDING_MODEL_NAME", "all-MiniLM-L6-v2"
         )
+        # "auto" (default) loads Sentence-Transformers and falls back to a
+        # deterministic hashed embedding only if that import/load fails.
+        # "hash" skips the Sentence-Transformers/torch import entirely, for
+        # memory-constrained deployments (e.g. Render's free 512MB web
+        # service tier, which gets OOM-killed loading the full model).
+        self.embedding_backend: str = os.getenv("EMBEDDING_BACKEND", "auto").lower()
         self.environment: str = os.getenv("ENVIRONMENT", "development")
 
 

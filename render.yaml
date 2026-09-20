@@ -20,6 +20,13 @@ services:
         value: /app/knowledge_base/chroma_store
       - key: ENVIRONMENT
         value: production
+      - key: EMBEDDING_BACKEND
+        value: hash
+        # Render's free web service plan has 512MB RAM, which is not enough
+        # to load Sentence-Transformers/torch at startup (it gets OOM-killed).
+        # "hash" uses the app's built-in deterministic fallback embedding
+        # instead. Remove this variable (or set it to "auto") on a paid plan
+        # with more memory to use the full semantic embedding model.
     healthCheckPath: /api/health
 
 databases:
