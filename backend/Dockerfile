@@ -9,6 +9,14 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 # No apt-get/build-essential needed: every dependency below (including
 # psycopg[binary], chromadb, and sentence-transformers/torch) ships
 # prebuilt manylinux wheels for this base image, so nothing compiles here.
+#
+# torch is pulled in transitively by sentence-transformers. On Linux, PyPI's
+# default torch build depends on several GB of separate NVIDIA CUDA packages
+# we never use (inference here is CPU-only). Installing the CPU-only build
+# from PyTorch's own wheel index first satisfies that dependency before
+# requirements.txt is processed, so pip never reaches for the CUDA variant.
+RUN pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu
+
 COPY backend/requirements.txt ./requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 

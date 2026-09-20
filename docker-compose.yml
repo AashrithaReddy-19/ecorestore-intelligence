@@ -6,7 +6,7 @@ services:
       POSTGRES_PASSWORD: ecorestore
       POSTGRES_DB: ecorestore
     ports:
-      - "5432:5432"
+      - "${DB_HOST_PORT:-5432}:5432"
     volumes:
       - db_data:/var/lib/postgresql/data
     healthcheck:
@@ -27,7 +27,7 @@ services:
       CHROMA_PERSIST_DIRECTORY: /app/knowledge_base/chroma_store
       ENVIRONMENT: docker
     ports:
-      - "8000:8000"
+      - "${BACKEND_HOST_PORT:-8000}:8000"
     depends_on:
       db:
         condition: service_healthy
@@ -39,9 +39,9 @@ services:
       context: .
       dockerfile: frontend/Dockerfile
       args:
-        VITE_API_BASE_URL: http://localhost:8000
+        VITE_API_BASE_URL: http://localhost:${BACKEND_HOST_PORT:-8000}
     ports:
-      - "5173:80"
+      - "${FRONTEND_HOST_PORT:-5173}:80"
     depends_on:
       - backend
 
